@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: ua-ip.com
+Sitemap: http://ua-ip.com/sitemap.txt
