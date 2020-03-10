@@ -201,6 +201,9 @@ h2 {
 		}
 	}
 }
+.gallery__pic--colortable {
+	background-image: url("../img/square-colortable.png");
+}
 .gallery__pic--crypto-vue {
 	background-image: url("../img/square-crypto-vue.jpg");
 }
@@ -288,6 +291,23 @@ table {
 .project__description{
 	font-family: Exo2Light, sans-serif;
 	font-weight: 200;
+}
+a.project__description {
+  border-bottom: 1px solid transparent;
+  transition: color, transform, text-shadow .25s ease;
+  text-shadow: 0px 3px 1px lighten( $accent, 40);
+  &:hover, &:active {
+    text-shadow: none;
+    i {
+      color: $accent;
+      transform: translateY(2px);
+    }
+  }
+  i {
+    font-size: 30px;
+    line-height: 30px;
+    color: lighten($accent,10);
+  }
 }
 .section--projects .col-sm-7 .col-sm-5 {
 	text-align: right;
