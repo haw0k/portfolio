@@ -2,6 +2,9 @@
 $(function() {
 
 // magnificPopup scroller start
+  customMfpGallery('.gallery__wrapper--portal', 'a.gallery__pic--portal');
+  customMfpGallery('.gallery__wrapper--crma', 'a.gallery__pic--crma');
+  customMfpGallery('.gallery__wrapper--crmb', 'a.gallery__pic--crmb');
   customMfpGallery('.gallery__wrapper--colortable', 'a.gallery__pic--colortable');
   customMfpGallery('.gallery__wrapper--crypto-vue', 'a.gallery__pic--crypto-vue');
   customMfpGallery('.gallery__wrapper--orlando', 'a.gallery__pic--orlando');

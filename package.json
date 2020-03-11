@@ -24,10 +24,6 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.1"
-<<<<<<< HEAD
   },
   "dependencies": {}
-=======
-  }
->>>>>>> 8fb21cd1c77906a5378011d5217118cf3ba52bfc
 }

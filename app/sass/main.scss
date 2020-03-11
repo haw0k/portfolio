@@ -3,9 +3,10 @@
 @import "libs";
 @import "vars";
 @import "../libs/magnific-popup/src/css/main.scss";
-// @import "magnific";
 @import "2top";
 @import "animate";
+
+$offsetY: -80px;
 
 * {
 	box-sizing: border-box;
@@ -67,7 +68,6 @@ body {
 }
 
 h1 {
-	// font-family: Exo2Thin, sans-serif;
 	font-family: Exo2Light, sans-serif;
 	font-size: 48px;
 	color: black;
@@ -105,7 +105,6 @@ header {
 		}
 	}
 	a:focus, a:hover {
-	    // color: white;
 			color: $accent;
 			text-shadow: none;
 			border-bottom: solid 3px $accent;
@@ -116,8 +115,6 @@ a {
 	color: $accent;
 	outline: none;
 	font-family: Exo2Light, sans-serif;
-	// border-bottom: 1px #666 dashed;
-	// transition: color, border-bottom .25s ease;
 	&:hover, &:focus {
 		color: $accent;
 		text-decoration: none;
@@ -149,8 +146,6 @@ h2 {
 .js-animate.gallery__wrapper {
   animation: fadeInLeft 550ms ease-in;
   animation: pulse 550ms ease-in;
-  // animation-duration: 0.75s;
-  // transform-origin: center bottom;
 }
 .js-animate {
   opacity: 1;
@@ -201,30 +196,39 @@ h2 {
 		}
 	}
 }
-.gallery__pic--colortable {
-	background-image: url("../img/square-colortable.png");
+
+.gallery__pic--portal {
+	background-image: url("../img/square-portal.png");
 }
+
+.gallery__pic--crma {
+	background-image: url("../img/square-crma.png");
+}
+
+.gallery__pic--crmb {
+	background-image: url("../img/square-crmb.png");
+}
+
 .gallery__pic--crypto-vue {
 	background-image: url("../img/square-crypto-vue.jpg");
 }
-.gallery__pic--orlando {
-	background-image: url("../img/square-orlando.png");
-}
-.gallery__pic--mogo {
-	background-image: url("../img/square-mogo.png");
-}
+
 .gallery__pic--btc {
 	background-image: url("../img/square-btc.png");
 }
+
 .gallery__pic--eliteclub {
 	background-image: url("../img/square-eliteclub.jpg");
 }
+
 .gallery__pic--decor-solutions {
 	background-image: url("../img/square-decor-solutions.jpg");
 }
+
 .gallery__pic--urlaubsgluck {
 	background-image: url("../img/square-urlaubsgluck.png");
 }
+
 .gallery__pic--vbs {
 	background-image: url("../img/square-vbs.png");
 }
@@ -271,7 +275,6 @@ table {
 		th:last-child {text-align: left}
 		td {
 			&:nth-child(2n+1) {
-				// clear: both;
 				text-align: right;
 			}
 			&:nth-child(2n) {
@@ -345,169 +348,169 @@ a.project__description {
 			transition: color, border-bottom .25s ease;
 		}
 		&:hover {
-			// color: lighten($accent, 30%);
-      // text-decoration: underline;
       border-bottom: none;
 			color: $accent;
 			.skill__icon {
-        background-position-x: -78px;
+        background-position-x: $offsetY;
         transform: translateY(2px);
-        transition: transform .1s ease;
+				transition: transform .1s ease;
 			}
-			
 		}
 	}
 }
 
 .skill__wrapper {
-	// margin: 0 20px;
 	display: inline-block;
 	width: 117px;
 	padding: 0 20px 10px 20px;
 }
+
 .plang__icon {
-	background-image: url("../img/languages.png");
+	background-image: url("../img/v2-languages.png");
 }
+
 .libs__icon {
-	background-image: url("../img/libraries.png");
+	background-image: url("../img/v2-libraries.png");
 }
+
 .tools__icon {
-	background-image: url("../img/tools.png");
+	background-image: url("../img/v2-tools.png");
 }
+
 .backend__icon {
-	background-image: url("../img/backend.png");
+	background-image: url("../img/v2-backend.png");
 }
-.frameworks__icon {
-	background-image: url("../img/frameworks.png");
+
+.graphics__icon {
+	background-image: url("../img/v2-graphics.png");
 }
 
 .skill__icon {
 	display: block;
 	height: 67px;
-  margin: 0 auto;
-  
+	margin: 0 auto;
+	width: 67px;
+
 	&--css {
 		width: 60px;
 	}
+
 	&--delphi {
-		width: 67px;
-		background-position-y: -68px;
+		background-position-y: $offsetY;
 	}
+
 	&--html {
 		width: 60px;
-		background-position-y: 2*-68px;
+		background-position-y: 2*$offsetY;
 	}
+
 	&--js {
 		width: 60px;
-		background-position-y: 3*-68px;
+		background-position-y: 3*$offsetY;
 	}
+
 	&--php {
-		width: 67px;
-		background-position-y: 4*-68px;
+		background-position-y: 4*$offsetY;
 	}
+
 	&--sql {
 		width: 52px;
-		background-position-y: 5*-68px;
+		background-position-y: 5*$offsetY;
 	}
-	&--ade {
-		background-position-y: 0;
-		width: 76px;
-	}
-	&--adi {
-		background-position-y: -68px;
-		width: 76px;
-	}
+
 	&--bootstrap {
-		// background-position-y: 2*-68px;
-		width: 67px;
+		background-position-y: 0;
 	}
-	&--fr {
-		background-position-y: 3*-68px;
-		width: 62px;
-	}
-	&--mydac {
-		background-position-y: 4*-68px;
-		width: 65px;
-	}
+
 	&--jquery {
-		// background-position-y: -5*68px;
-		background-position-y: -68px;
-		width: 67px;
+		background-position-y: $offsetY;
+		height: 68px;
 	}
-	&--jqueryui {
-		background-position-y: -6*68px;
-		width: 77px;
+
+	&--mobx {
+		background-position-y: 2*$offsetY;
 	}
-	&--pcss {
-		background-position-y: -7*68px;
-		width: 62px;
+
+	&--next {
+		background-position-y: 3*$offsetY;
+	}
+
+	&--react {
+		background-position-y: 5*$offsetY;
 	}
 	&--sass {
-		background-position-y: -8*68px;
-		width: 67px;
+		background-position-y: 4*$offsetY;
 	}
-	&--atom {
-		background-position-y: 0;
-		width: 67px;
-	}
+
 	&--dbforge {
-		background-position-y: -68px;
+		background-position-y: 0;
 		width: 59px;
 	}
+
 	&--git {
-		background-position-y: 2*-68px;
-		width: 67px;
+		background-position-y: $offsetY;
 	}
-	&--grunt {
-		background-position-y: 3*-68px;
-		width: 50px;
-	}
+
 	&--gulp {
-		background-position-y: 4*-68px;
-		width: 67px;
+		background-position-y: 2*$offsetY;
 	}
+
+	&--postman {
+		background-position-y: 3*$offsetY;
+	}
+
 	&--ps {
-		background-position-y: -5*68px;
-		width: 67px;
+		background-position-y: $offsetY;
 	}
-	&--rad {
-		background-position-y: -6*68px;
-		width: 67px;
-	}
+
 	&--xd {
-		background-position-y: -7*68px;
-		width: 67px;
+		background-position-y: 2*$offsetY;
 	}
+
+	&--zeplin {
+		background-position-y: 3*$offsetY;
+		width: 68px;
+		height: 62px;
+	}
+
 	&--vcode {
-		background-position-y: -8*68px;
-		width: 67px;
+		background-position-y: 4*$offsetY;
 	}
+
 	&--webpack {
-		background-position-y: -9*68px;
-		width: 67px;
+		background-position-y: 5*$offsetY;
 	}
+
+	&--yarn {
+		background-position-y: 6*$offsetY;
+	}
+
 	&--linux {
 		width: 57px;
 	}
-	&--modx {
-		width: 66px;
-		background-position-y: -68px;
+
+	&--mongo {
+		width: 31px;
+		background-position-y: $offsetY;
 	}
+
+	&--mongoose {
+		background-position-y: 2*$offsetY;
+		height: 40px;
+	}
+
 	&--mysql {
-		width: 67px;
-		background-position-y: 2*-68px;
+		background-position-y: 3*$offsetY;
 	}
+
 	&--nodejs {
 		width: 60px;
-		background-position-y: 3*-68px;
+		background-position-y: 4*$offsetY;
 	}
-	&--wordpress {
-		width: 67px;
-		background-position-y: 4*-68px;
-  }
-  &--vue {
-    width: 77px;
-    background-position-y: 2*-68px;
+
+	&--sequelize {
+		width: 59px;
+		background-position-y: 5*$offsetY;
   }
 }
 .section--contacts {
@@ -527,7 +530,6 @@ a.project__description {
 		&:hover {
       border-bottom: none;
       color: $accent;
-			// text-decoration: underline;
 			.contact__icon {
         background-position-x: -78px;
         transform: translateY(2px);
@@ -571,5 +573,4 @@ a.project__description {
 	display: none;
 }
 
-
-@import "media"; // Всегда в конце
+@import "media";
