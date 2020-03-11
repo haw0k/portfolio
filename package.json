@@ -1,12 +1,12 @@
 {
-  "name": "optimizedhtml",
+  "name": "portfolio",
   "version": "2.0.1",
-  "description": "OptimizedHTML - Start HTML Template",
+  "description": "Zlachevsky portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx npm-force-resolutions"
   },
-  "author": "WebDesign Master",
+  "author": "Zlachevsky",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -24,6 +24,9 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.1"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   },
   "dependencies": {}
 }
